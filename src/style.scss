@@ -1,1 +1,12 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "~bootstrap/scss/variables";
+
+//@import "./";
+
+:root {
+    @each $spacer, $value in $spacers{
+        //$res: var(#{$value} * 5);
+        --theme-spacer-#{$spacer}: #{$value};//$res;
+    }
+}
