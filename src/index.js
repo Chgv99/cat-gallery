@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 //import "bootstrap/dist/css/bootstrap.min.css";
-import "../src/style.scss";
+import "./assets/style.scss";
 
 import App from './App';
 

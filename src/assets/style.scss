@@ -1,0 +1,16 @@
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "./abstracts/map-ammends";
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+//@import "~bootstrap/scss/bootstrap";
+
+:root {
+    @each $spacer, $value in $spacers{
+        //$res: var(#{$value} * 5);
+        --theme-spacer-#{$spacer}: #{$value};//$res;
+    }
+}

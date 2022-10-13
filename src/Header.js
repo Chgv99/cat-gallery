@@ -2,12 +2,14 @@ import React from "react";
 
 const Header = () => {
     return ( 
-        <header className = "d-block m-5" >
-            <h1 class="text-center">Cat Gallery</h1>
-            <p className = "text-center" >
-                    paragraph test
-            </p> 
-        </header>
+        <>
+            <header className= "d-block m-9" >
+                <h1 className="text-center">Cat Gallery</h1>
+                <p className = "text-center" >
+                        paragraph test
+                </p> 
+            </header>
+        </>
     );
 };
 
