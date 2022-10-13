@@ -4,7 +4,7 @@ const Body = () => {
     return (
         <>
         
-        <div className='mb-9 w-auto border rounded bg-primary container'>
+        <div className='container'>
             <div className='row'>
                 <p>Content.</p>
             </div>

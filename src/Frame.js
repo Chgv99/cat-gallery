@@ -49,8 +49,8 @@ const Frame = () => {
     return (
         <>
             {/*<button onClick={fetchImg}>Get cat</button>*/}
-            <div className="">
-                <img alt="cat" className="rounded-4 border-2 border-primary w-100 h-100" src={image}/>
+            <div className="cat-image rounded-4 border border-2 border-secondary">
+                <img alt="cat" className=" " src={image}/>
             </div>
         </>
     );

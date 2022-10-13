@@ -10,7 +10,7 @@ import Body from './Body';
 const App = () => {
   return (
     <>
-      <div className="mx-9" Style="height: 100%">
+      <div className="">
       <Header />
       <Body />
       <Footer />
