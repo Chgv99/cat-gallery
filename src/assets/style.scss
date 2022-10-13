@@ -1,11 +1,31 @@
 
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/mixins";
 @import "./abstracts/map-ammends";
 
 $theme-colors: (
     "primary": $blue-200
+);
+
+$border-radius-xl: .6rem;
+
+$utilities: (
+    "rounded": (
+        property: border-radius,
+        class: rounded,
+        values: (
+            null: $border-radius,
+            0: 0,
+            1: $border-radius-sm,
+            2: $border-radius,
+            3: $border-radius-lg,
+            4: $border-radius-xl,
+            circle: 50%,
+            pill: $border-radius-pill
+        )
+    )
 );
 
 //$primary: map.get($theme-colors, "primary");

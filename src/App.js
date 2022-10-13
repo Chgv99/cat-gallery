@@ -10,9 +10,11 @@ import Body from './Body';
 const App = () => {
   return (
     <>
+      <div className="mx-9" Style="height: 100%">
       <Header />
       <Body />
       <Footer />
+      </div>
     </>
   );
 }
