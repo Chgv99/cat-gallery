@@ -3,21 +3,16 @@ import React from "react";
 import Header from './Header';
 //import Banner from './Banner';
 import Footer from './Footer';
-import Frame from './Frame';
+import Body from './Body';
+
 //import fetchImg from './Backend/FetchImg';
 
 const App = () => {
   return (
     <>
-      {console.log("1")}
       <Header />
-      {console.log("2")}
-      <Frame />
-      {console.log("3")}
+      <Body />
       <Footer />
-      {console.log("4")}
-      
-      {console.log("5")}
     </>
   );
 }

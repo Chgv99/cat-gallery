@@ -4,6 +4,12 @@
 @import "~bootstrap/scss/mixins";
 @import "./abstracts/map-ammends";
 
+$theme-colors: (
+    "primary": $blue-200
+);
+
+//$primary: map.get($theme-colors, "primary");
+
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 //@import "~bootstrap/scss/bootstrap";
@@ -13,4 +19,12 @@
         //$res: var(#{$value} * 5);
         --theme-spacer-#{$spacer}: #{$value};//$res;
     }
+}
+
+body {
+    background-color: black;
+}
+
+.white {
+    color: $primary;
 }

@@ -1,40 +1,57 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 //import ;
 //import Carousel from "bootstrap/js/dist/carousel";
 import montse from "./assets/images/monster.png";
+//import FetchImg from "./Backend/FetchImg";
+//import fetchImg from "./Backend/FetchImg";
 
 const Frame = () => {
+    
+    console.log("Frame");
+    
     let url = 'https://api.thecatapi.com/v1/images/search?size=full';
-    let image = document.getElementById("cat-img");
-    function fetchImg() {
+    let images = [];
+    let count = 0;
+    const [image, setImage] = useState("i");
+    const fetchImg = () => {
         
         console.log("ajax_get for " + url);
-        fetch(url, {
-            //method: 'GET',
-            //mode: 'cors'
+        return fetch(url, {
+            
         })
-        .then(response => /*callback(response)*/{
-            return response.json();
-        }).then(result => {
-            //console.log(result[0].url);
-            //return result[0].url;
-            image.src = result[0].url;
-        })
-        .catch(function(error){
-            console.log("Error fetching (Frame)")
-            console.log(error);
-        });
+        .then(response => response.json())
+        .then(url => setImage(url[0].url));
+        return;
     }
-    //
-    if (!image) return <p>Loading...</p>
+    console.log("fetching image: ")
+    //const img = fetchImg();
+    //console.log(img)
+    console.log("fetched image: ")
+    console.log(image)
+    /*if (!image) {
+        
+        return (
+            <>
+                <p>e</p>
+            </>
+        );
+    }*/
+    //console.log(fetchImg().then(response => response.json()).then(url => url[0].url))
+    console.log("count: " + count)
+    if (count < 1) {
+        count++
+        //fetchImg();
+    }
+    useEffect(()=>{
+        // do stuff here...
+        fetchImg();
+    }, [])
     return (
         <>
-            <img id="cat-img" alt="cat" src=""/>
-            {image = document.getElementById("cat-img")}
-            {fetchImg()}
+            {/*<button onClick={fetchImg}>Get cat</button>*/}
+            <img alt="cat" src={image}/>
         </>
     );
-    
 };
 
 export default Frame;
